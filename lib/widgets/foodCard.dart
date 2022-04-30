@@ -45,7 +45,8 @@ class FoodCard extends StatelessWidget {
                 height: 30,
                 width: 100,
                 decoration: BoxDecoration(
-                  color: const Color(0xfff97316),
+                  gradient: const LinearGradient(begin: Alignment.bottomCenter,end: Alignment.topCenter,colors: [Color(0xfff97316), Color(
+                      0x80f97316)]),
                   borderRadius: BorderRadius.circular(20)
               ),
                 child: const Center(child: Text("Order Now", style: TextStyle(color: Colors.white,),)),

@@ -59,7 +59,8 @@ class _IntroScreenState extends State<IntroScreen> {
                     height: height/20,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: const Color(0xfff67200)
+                      gradient: const LinearGradient(begin: Alignment.bottomCenter,end: Alignment.topCenter,colors: [Color(0xfff97316), Color(
+                          0x80f97316)]),
                     ),
                     child: const Center(child: Text("Get Started Now", style: TextStyle(fontSize: 18, color: Colors.white),)),
                   ),

@@ -5,7 +5,7 @@ import '../foodDescription.dart';
 class Header extends StatefulWidget {
   const Header({Key? key,
     this.offer="50%",
-    this.description="Offer is only today, So place your order right now",
+    this.description="Offer is only today,u'p;love u kichuu So place your order right now",
     this.asset = "assets/burger1.png"}) : super(key: key);
   final String offer;
   final String description;
@@ -20,10 +20,11 @@ class _HeaderState extends State<Header> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Container(
-      height: height/3,
+      height: height/2.75,
       width:width/1.2,
       decoration: BoxDecoration(
-        color: const Color(0xfff97316),
+          gradient: const LinearGradient(begin: Alignment.bottomCenter,end: Alignment.topCenter,colors: [Color(0xfff97316), Color(
+              0x80f97316)]),
         borderRadius: BorderRadius.circular(20)
       ),
       child: Padding(
@@ -37,7 +38,7 @@ class _HeaderState extends State<Header> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(widget.offer, style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),),
-                  Flexible(child: Text(widget.description, style: const TextStyle(color: Colors.white, fontSize: 20),)),
+                  Flexible(child: Text(widget.description, style: const TextStyle(color: Colors.white, fontSize: 18),)),
                   GestureDetector(
                     onTap: (){
                       Navigator.push(
@@ -46,10 +47,12 @@ class _HeaderState extends State<Header> {
                               builder: (context) => const FoodDescription()));
                     },
                     child: Container(
-                      height: 30,
+                      height: 40,
                       width: width/3,
                       decoration: BoxDecoration(
-                        color: Colors.black,
+                        gradient: const LinearGradient(begin: Alignment.bottomCenter,end: Alignment.topCenter,colors: [Color(
+                            0xff000000), Color(
+                            0xFF555555)]),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Center(child: Text("Order Now", style: TextStyle(color: Colors.white, fontSize: 20),)),

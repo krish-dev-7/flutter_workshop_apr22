@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_workshop_apr22/HomePage.dart';
@@ -91,9 +92,11 @@ class _FoodDescriptionState extends State<FoodDescription> {
           empty: const Icon(Icons.star, color: Color(0xffd2d2d2),),
           half: const Icon(Icons.star, color: Color(0xfff97316),),
         ),
-        itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+        itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
         onRatingUpdate: (rating) {
-          print(rating);
+          if (kDebugMode) {
+            print(rating);
+          }
         },
       ),
             const SizedBox(height: 30,),
@@ -101,7 +104,8 @@ class _FoodDescriptionState extends State<FoodDescription> {
               height: 30,
               width: 400,
               decoration: BoxDecoration(
-                  color: const Color(0xfff97316),
+                  gradient: const LinearGradient(begin: Alignment.bottomCenter,end: Alignment.topCenter,colors: [Color(0xfff97316), Color(
+                      0x80f97316)]),
                   borderRadius: BorderRadius.circular(20)
               ),
               child: const Center(child: Text("Place Order", style: TextStyle(color: Colors.white,),)),
