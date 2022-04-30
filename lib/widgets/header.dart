@@ -5,7 +5,7 @@ import '../foodDescription.dart';
 class Header extends StatefulWidget {
   const Header({Key? key,
     this.offer="50%",
-    this.description="Offer is only today,u'p;love u kichuu So place your order right now",
+    this.description="Offer is only today,So place your order right now",
     this.asset = "assets/burger1.png"}) : super(key: key);
   final String offer;
   final String description;
